@@ -1,0 +1,22 @@
+.gif-div {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 30rem;
+}
+
+.gif-list {
+  width: 50%;
+}
+ul.no-bullets {
+  list-style-type: none;
+}
+
+img {
+  width: 240px;
+  height: 200px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
