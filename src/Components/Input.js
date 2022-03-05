@@ -54,6 +54,7 @@ const Input = (props) => {
       )}
       {!props.isGif && (
         <Button
+          variant="outlined"
           style={{ float: "left", margin: "1rem auto" }}
           href="#text-buttons"
           onClick={() => gifHandler(true)}
