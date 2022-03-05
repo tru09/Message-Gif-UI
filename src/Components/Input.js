@@ -30,7 +30,7 @@ const Input = (props) => {
       onSubmit={PostSubmitHandler}
       className="post-form"
       style={
-        props.sendgif.length > 0 ? { height: "14rem" } : { height: "7rem" }
+        props.sendgif.length > 0 ? { height: "22rem" } : { height: "7rem" }
       }
     >
       <TextField
