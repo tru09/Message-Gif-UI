@@ -8,7 +8,9 @@ const Input = (props) => {
 
   const PostSubmitHandler = (event) => {
     event.preventDefault();
+
     props.onsubmit(message);
+    props.sendgif.length = 0;
   };
 
   const messageHandler = (event) => {
@@ -24,7 +26,13 @@ const Input = (props) => {
   };
 
   return (
-    <form onSubmit={PostSubmitHandler} className="post-form">
+    <form
+      onSubmit={PostSubmitHandler}
+      className="post-form"
+      style={
+        props.sendgif.length > 0 ? { height: "14rem" } : { height: "7rem" }
+      }
+    >
       <TextField
         className="post-input"
         label="Message"
@@ -33,13 +41,12 @@ const Input = (props) => {
         onChange={messageHandler}
         fullWidth
       />
-      {props.sendgif.value && (
-        <img
-          style={{ height: "30px", width: "30px" }}
-          id={props.sendgif.id}
-          src={props.sendgif.src}
-          alt="gif"
-        />
+      {props.sendgif.length > 0 && (
+        <div className="div-gif-display">
+          {props.sendgif.map((img) => (
+            <img id={img.id} src={img.src} alt="gif" />
+          ))}
+        </div>
       )}
 
       {props.isGif && (

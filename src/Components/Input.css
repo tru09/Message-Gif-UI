@@ -1,14 +1,25 @@
 .post-form {
-  background-color: blueviolet;
-  background-color: #a892ee;
+  background-color: rgb(211, 147, 211);
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
-  height: 7rem;
+
   max-width: 95%;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.div-gif-display {
+  height: 100px;
+  margin: 3px 0 8px 3px;
+  display: flex;
+  overflow-x: scroll;
+}
+.div-gif-display img {
+  height: 100px;
+  width: 100px;
+  margin-right: 5px;
 }
 
 .post-button {

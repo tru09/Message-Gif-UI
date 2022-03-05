@@ -10,19 +10,24 @@ const App = () => {
   const [gif, setGif] = useState([]);
   const [isGif, setIsGif] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [sendgif, setSendGif] = useState({});
+  const [sendgif, setSendGif] = useState([]);
 
   const SubmitHandler = (message) => {
     setMessages([...messages, message]);
   };
 
-  const GifPost = (value, id, src) => {
+  const GifPost = (value, id) => {
+    const image = document.getElementById(id);
     const obj = {
       value: value,
-      id: id,
-      src: src,
+      id: image.id,
+      src: image.src,
     };
-    setSendGif({ ...sendgif, obj });
+
+    console.log(obj.id, obj.src);
+
+    setSendGif([...sendgif, obj]);
+    console.log(sendgif);
   };
 
   return (

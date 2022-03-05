@@ -1,19 +1,18 @@
 .gif-div {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   overflow-y: scroll;
   height: 30rem;
 }
 
 .gif-list {
-  width: 50%;
-}
-ul.no-bullets {
-  list-style-type: none;
+  width: 100%;
+  /* overflow-y: scroll; */
 }
 
 img {
-  width: 240px;
+  width: 200px;
   height: 200px;
 }
 
