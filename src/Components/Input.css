@@ -26,3 +26,14 @@
   margin: 1rem;
   float: right;
 }
+
+@media screen and (min-width: 400) {
+  .post-form {
+    height: 23rem;
+  }
+
+  .post-button {
+    margin: 5px;
+    float: left;
+  }
+}

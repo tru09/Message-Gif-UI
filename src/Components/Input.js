@@ -10,6 +10,7 @@ const Input = (props) => {
     event.preventDefault();
 
     props.onsubmit(message);
+    setMessage("");
     props.sendgif.length = 0;
   };
 
@@ -19,6 +20,7 @@ const Input = (props) => {
 
   const clearHandler = () => {
     setMessage("");
+    props.sendgif.length = 0;
   };
 
   const gifHandler = (value) => {
